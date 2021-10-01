@@ -4,16 +4,11 @@ text (dark grey): #4D4D4D;
 primary Color (teal): #239caa;
 secondary Color (yellow): #ffc400;
 */
-header {
-  background-color: #bedbed;
-  padding: 10px;
-  margin: 10px;
-}
 
 body {
   background-color: #ffffff;
   font-family: 'Nunito', sans-serif;
-  font-size: 16px;
+  font-size: 16px
   font-weight: 400;
   line-height: 1.4;
   color: #4D4D4D;
