@@ -4,6 +4,7 @@ text (dark grey): #4D4D4D;
 primary Color (teal): #239caa;
 secondary Color (yellow): #ffc400;
 */
+
 * {
   box-sizing: border-box;
 }
@@ -65,6 +66,29 @@ img {
   width: 100%;
 }
 
+@keyframes shake {
+  0% {transform: rotate(0deg);}
+  25% {transform: rotate(1deg);}
+  75% {transform: rotate(-1deg);}
+}
+
+@keyframes scale {
+  0% {transform: scale(1);}
+  100% {transform: scale(1.04);}
+}
+
+.chopsticks, .avocado, .shrimp {
+  animation: 1.5s infinite linear shake;
+}
+
+.salmon, .cucumber {
+  animation: 1.5s infinite reverse linear shake;
+}
+
+.bowl {
+  animation: 1s infinite alternate linear scale;
+}
+
 /* hyperlinks & buttons
 default (primary, teal): #239caa
 visited (light teal): #7cbbc2
@@ -105,7 +129,7 @@ a:active {
 }
 
 .button:hover {
-  opacity: 0.8;
+  opacity: 0.7;
   text-decoration: none;
 }
 
@@ -144,7 +168,7 @@ a:active {
 /* Layout styling */
 header {
   text-align: center;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   padding: 10px 0;
   position: fixed;
   width: 100%;
@@ -188,6 +212,7 @@ nav>ul>li>a:active {
 
 main {
   padding-top: 290px;
+  background-color: #ffffff;
   width: 100%;
 }
 
@@ -203,7 +228,7 @@ footer {
 }
 
 .row {
-  margin: 25px 0;
+  padding: 25px 0px 25px 0px;
 }
 
 .logo {
@@ -234,4 +259,72 @@ h1, #hero p {
 
 #contact h2, #social h2 {
   margin-bottom: 10px;
+}
+
+/* ==============================
+medium devices (640px or larger)
+=================================*/
+@media only screen and (min-width: 640px) {
+header {
+  text-align: unset;
+}
+
+nav {
+  width: auto;
+  float: right;
+  margin-top: 115px;
+}
+
+main{
+  padding-top: 219px;
+}
+
+body {
+  font-size: 18px;
+}
+ #hero span {
+   display: block;
+ }
+
+ .col-md-6 {
+ 	width: 50%;
+}
+
+[class*="col-"] {
+	float: left;
+  padding: 0px 10px 0px 10px;
+}
+
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+}
+
+/* ==============================
+large devices (1024px or larger)
+=================================*/
+@media only screen and (min-width: 1024px) {
+.col-lg-7 {
+   width: 58.33%;
+}
+
+.col-lg-5 {
+     width: 41.66%;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+}
+
+/* ==============================
+x-large devices (1440px or larger)
+=================================*/
+@media only screen and (min-width: 1440px) {
 }
