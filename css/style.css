@@ -4,7 +4,6 @@ text (dark grey): #4D4D4D;
 primary Color (teal): #239caa;
 secondary Color (yellow): #ffc400;
 */
-
 * {
   box-sizing: border-box;
 }
@@ -61,20 +60,33 @@ p {
 }
 
 /* images */
-
 img {
   width: 100%;
+  max-width: 800px;
 }
 
 @keyframes shake {
-  0% {transform: rotate(0deg);}
-  25% {transform: rotate(1deg);}
-  75% {transform: rotate(-1deg);}
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(1deg);
+  }
+
+  75% {
+    transform: rotate(-1deg);
+  }
 }
 
 @keyframes scale {
-  0% {transform: scale(1);}
-  100% {transform: scale(1.04);}
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.04);
+  }
 }
 
 .chopsticks, .avocado, .shrimp {
@@ -164,7 +176,6 @@ a:active {
   text-align: left;
 }
 
-
 /* Layout styling */
 header {
   text-align: center;
@@ -210,10 +221,15 @@ nav>ul>li>a:active {
   color: #0c5668;
 }
 
+#skills ul {
+  text-align: left;
+}
+
 main {
   padding-top: 290px;
   background-color: #ffffff;
   width: 100%;
+  text-align: center;
 }
 
 footer {
@@ -265,66 +281,66 @@ h1, #hero p {
 medium devices (640px or larger)
 =================================*/
 @media only screen and (min-width: 640px) {
-header {
-  text-align: unset;
-}
+  header {
+    text-align: unset;
+  }
 
-nav {
-  width: auto;
-  float: right;
-  margin-top: 115px;
-}
+  nav {
+    width: auto;
+    float: right;
+    margin-top: 115px;
+  }
 
-main{
-  padding-top: 219px;
-}
+  main {
+    padding-top: 219px;
+  }
 
-body {
-  font-size: 18px;
-}
- #hero span {
-   display: block;
- }
+  body {
+    font-size: 18px;
+  }
 
- .col-md-6 {
- 	width: 50%;
-}
+  #hero span {
+    display: block;
+  }
 
-[class*="col-"] {
-	float: left;
-  padding: 0px 10px 0px 10px;
-}
+  .col-md-6 {
+    width: 50%;
+  }
 
-.row::after {
-	content: "";
-	clear: both;
-	display: table;
-}
+  [class*="col-"] {
+    float: left;
+    padding: 0px 10px 0px 10px;
+  }
 
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
 }
 
 /* ==============================
 large devices (1024px or larger)
 =================================*/
 @media only screen and (min-width: 1024px) {
-.col-lg-7 {
-   width: 58.33%;
-}
+  .col-lg-7 {
+    width: 58.33%;
+  }
 
-.col-lg-5 {
-     width: 41.66%;
-}
+  .col-lg-5 {
+    width: 41.66%;
+  }
 
-.container {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /* ==============================
 x-large devices (1440px or larger)
 =================================*/
 @media only screen and (min-width: 1440px) {
+
 }
