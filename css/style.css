@@ -65,6 +65,10 @@ img {
   max-width: 800px;
 }
 
+.logo {
+  max-width: 100px;
+}
+
 @keyframes shake {
   0% {
     transform: rotate(0deg);
@@ -226,7 +230,7 @@ nav>ul>li>a:active {
 }
 
 main {
-  padding-top: 290px;
+  padding-top: 158px;
   background-color: #ffffff;
   width: 100%;
   text-align: center;
@@ -245,10 +249,6 @@ footer {
 
 .row {
   padding: 25px 0px 25px 0px;
-}
-
-.logo {
-  max-width: 250px;
 }
 
 .fab {
@@ -288,11 +288,10 @@ medium devices (640px or larger)
   nav {
     width: auto;
     float: right;
-    margin-top: 115px;
   }
 
   main {
-    padding-top: 219px;
+    padding-top: 83px;
   }
 
   body {
