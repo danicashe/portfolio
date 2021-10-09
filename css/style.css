@@ -60,7 +60,6 @@ p {
 }
 
 /* images */
-
 img {
   width: 100%;
   max-width: 800px;
@@ -68,6 +67,48 @@ img {
 
 .logo {
   max-width: 70px;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(2deg);
+  }
+
+  75% {
+    transform: rotate(-2deg);
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.04);
+  }
+}
+
+.chopsticks, .avocado, .shrimp {
+  animation: 1.5s infinite linear shake;
+  transform-origin: 50% 50%;
+transform-box: fill-box;
+}
+
+.salmon, .cucumber {
+  animation: 1.5s infinite reverse linear shake;
+  transform-origin: 50% 50%;
+transform-box: fill-box;
+}
+
+.bowl {
+  animation: 1s infinite alternate linear scale;
+  transform-origin: 50% 50%;
+transform-box: fill-box;
 }
 
 /* hyperlinks & buttons
@@ -79,7 +120,7 @@ active (dark teal): #0c5668
 a {
   color: #239caa;
   text-decoration: none;
-  text-weight: 500;
+  font-weight: 600;
 }
 
 a:visited {
@@ -110,7 +151,7 @@ a:active {
 }
 
 .button:hover {
-  opacity: 0.8;
+  opacity: 0.7;
   text-decoration: none;
 }
 
@@ -144,7 +185,7 @@ a:active {
 /* Layout styling */
 header {
   text-align: center;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   padding: 10px 0;
   position: fixed;
   width: 100%;
@@ -184,9 +225,19 @@ nav>ul>li>a:active {
   color: #0c5668;
 }
 
+#skills ul {
+  text-align: left;
+}
+
 main {
   padding-top: 140px;
+  background-color: #ffffff;
   width: 100%;
+  text-align: center;
+}
+
+main p {
+  text-align: left;
 }
 
 footer {
@@ -201,7 +252,7 @@ footer {
 }
 
 .row {
-  margin: 25px 0;
+  padding: 25px 0px 25px 0px;
 }
 
 .fab {
@@ -228,4 +279,71 @@ h1, #hero p {
 
 #contact h2, #social h2 {
   margin-bottom: 10px;
+}
+
+/* ==============================
+medium devices (640px or larger)
+=================================*/
+@media only screen and (min-width: 640px) {
+  header {
+    text-align: unset;
+  }
+
+  nav {
+    width: auto;
+    float: right;
+  }
+
+  main {
+    padding-top: 120px;
+  }
+
+  body {
+    font-size: 18px;
+  }
+
+  #hero span {
+    display: block;
+  }
+
+  .col-md-6 {
+    width: 50%;
+  }
+
+  [class*="col-"] {
+    float: left;
+    padding: 0px 10px 0px 10px;
+  }
+
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+/* ==============================
+large devices (1024px or larger)
+=================================*/
+@media only screen and (min-width: 1024px) {
+  .col-lg-7 {
+    width: 58.33%;
+  }
+
+  .col-lg-5 {
+    width: 41.66%;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* ==============================
+x-large devices (1440px or larger)
+=================================*/
+@media only screen and (min-width: 1440px) {
+
 }
