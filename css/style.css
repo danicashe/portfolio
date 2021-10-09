@@ -65,7 +65,7 @@ img {
 }
 
 .logo {
-  max-width: 100px;
+  max-width: 70px;
 }
 
 @keyframes shake {
@@ -177,12 +177,8 @@ a:active {
   color: #ffffff;
 }
 
-.project {
+.centered {
   text-align: center;
-}
-
-.project p {
-  text-align: left;
 }
 
 /* Layout styling */
@@ -192,9 +188,7 @@ header {
   padding: 10px 0;
   position: fixed;
   width: 100%;
-  -webkit-box-shadow: 0px 4px 5px 0px rgba(50, 50, 50, 0.25);
-  -moz-box-shadow: 0px 4px 5px 0px rgba(50, 50, 50, 0.25);
-  box-shadow: 0px 4px 5px 0px rgba(50, 50, 50, 0.25);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 nav {
@@ -235,7 +229,7 @@ nav>ul>li>a:active {
 }
 
 main {
-  padding-top: 158px;
+  padding-top: 140px;
   background-color: #ffffff;
   width: 100%;
   text-align: center;
