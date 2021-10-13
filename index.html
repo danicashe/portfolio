@@ -18,19 +18,22 @@
 
   <header>
     <div id="header" class="container">
-      <a href="index.html">
-        <picture>
-          <source srcset="img/logo/text_logo@0.5x.png" media="(max-width:767px)">
-          <img class="logo" src="img/logo/text_logo@1x.png" alt="danica she logo">
-        </picture>
-      </a>
-      <nav>
-        <ul>
-          <li><a href="index.html">Work</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+      <div id="myNavtoggle" class="navtoggle">
+        <a href="index.html">
+          <picture>
+            <source srcset="img/logo/text_logo@0.5x.png" media="(max-width:767px)">
+            <img class="logo" src="img/logo/text_logo@1x.png" alt="danica she logo">
+          </picture>
+        </a>
+        <nav>
+          <ul>
+            <li><a href="index.html">Work</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#contact" onclick="menuToggle()">Contact</a></li>
+            <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fas fa-bars"></i></a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
 
@@ -62,9 +65,9 @@
             <h5>UI/UX - Mobile app - 2021</h5>
             <p>A mobile app created for students to help keep track of assignments and manage short-term schedules. For this project, I referred to common patterns that are commonly used for checklist and calendar apps, then refined them to suit my
               app’s style and focus.</p>
-              <div class="centered">
-                <a href="noteit.html" class="button">View Project</a>
-              </div>
+            <div class="centered">
+              <a href="noteit.html" class="button">View Project</a>
+            </div>
           </div>
 
         </div>
@@ -949,7 +952,7 @@
             <div class=" project col-md-6 col-lg-5">
               <h3>CSS Animation</h3>
               <h5>CSS Animation - Sample - 2021</h5>
-              <p>Responsive sample animation using CSS and SVG image. <a href="https://storyset.com/food">Food illustrations by Storyset</a></p>
+              <p>Responsive sample animation using CSS and SVG image. <a href="https://storyset.com/food" target="_blank">Food illustrations by Storyset</a></p>
               <a href="moneytree.html" class="button">View Project</a>
             </div>
 
@@ -985,7 +988,8 @@
     </div>
   </footer>
 
-<script src="js/scripts.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="js/scripts.js"></script>
 </body>
 
 </html>

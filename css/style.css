@@ -95,19 +95,19 @@ img {
 .chopsticks, .avocado, .shrimp {
   animation: 1.5s infinite linear shake;
   transform-origin: 50% 50%;
-transform-box: fill-box;
+  transform-box: fill-box;
 }
 
 .salmon, .cucumber {
   animation: 1.5s infinite reverse linear shake;
   transform-origin: 50% 50%;
-transform-box: fill-box;
+  transform-box: fill-box;
 }
 
 .bowl {
   animation: 1s infinite alternate linear scale;
   transform-origin: 50% 50%;
-transform-box: fill-box;
+  transform-box: fill-box;
 }
 
 /* hyperlinks & buttons
@@ -183,7 +183,6 @@ a:active {
 
 /* Layout styling */
 header {
-  text-align: center;
   background-color: #ffffff;
   padding: 10px 0;
   position: fixed;
@@ -191,19 +190,10 @@ header {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-nav {
-  display: inline-block;
-  width: 100%;
-  padding-top: 20px;
-}
-
 nav>ul {
   list-style-type: none;
   padding: 0;
-}
-
-nav>ul>li {
-  display: inline-block;
+  margin: 0;
 }
 
 nav>ul>li>a {
@@ -224,12 +214,34 @@ nav>ul>li>a:active {
   color: #0c5668;
 }
 
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  font-size: 30px;
+  padding: 13px 0;
+}
+
+.navtoggle.responsive li {
+  display: block;
+  text-align: right;
+  padding: 20px 0 0 0;
+}
+
 #skills ul {
   text-align: left;
 }
 
 main {
-  padding-top: 140px;
+  padding-top: 100px;
   background-color: #ffffff;
   width: 100%;
   text-align: center;
@@ -283,7 +295,7 @@ h1, #hero p {
 /* ==============================
 medium devices (640px or larger)
 =================================*/
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 641px) {
   header {
     text-align: unset;
   }
@@ -303,6 +315,27 @@ medium devices (640px or larger)
 
   #hero span {
     display: block;
+  }
+
+  nav>ul {
+    margin: 1em 0;
+    padding-top: 20px;
+  }
+
+  nav>ul>li {
+    display: inline-block;
+  }
+
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
+
+  .navtoggle li:last-child {
+    display: none;
+  }
+
+  .logo {
+    min-width: 100px;
   }
 
   .col-md-6 {
@@ -343,6 +376,4 @@ large devices (1024px or larger)
 /* ==============================
 x-large devices (1440px or larger)
 =================================*/
-@media only screen and (min-width: 1440px) {
-
-}
+@media only screen and (min-width: 1440px) {}
