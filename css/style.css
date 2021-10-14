@@ -233,7 +233,6 @@ nav>ul>li>a:active {
 .navtoggle.responsive li {
   display: block;
   text-align: right;
-  padding: 20px 0 0 0;
 }
 
 #skills ul {
