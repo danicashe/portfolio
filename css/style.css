@@ -9,12 +9,12 @@ secondary Color (yellow): #ffc400;
 }
 
 body {
-  background-color: #ffffff;
+  background-color: #fff;
   font-family: 'Nunito', sans-serif;
   font-size: 16px;
   font-weight: 300;
   line-height: 1.5;
-  color: #4D4D4D;
+  color: #4d4d4d;
 }
 
 h1 {
@@ -28,6 +28,7 @@ h2 {
   font-weight: 500;
   line-height: 1;
   text-transform: uppercase;
+  text-decoration: underline;
   padding-top: 15px;
 }
 
@@ -40,7 +41,7 @@ h3 {
 
 h4 {
   text-decoration: underline;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   font-weight: 500;
 }
 
@@ -51,7 +52,7 @@ h5 {
 }
 
 p {
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 .subhead {
@@ -59,6 +60,7 @@ p {
 }
 
 /* images */
+
 img {
   width: 100%;
   max-width: 800px;
@@ -66,6 +68,7 @@ img {
 
 .logo {
   max-width: 70px;
+  padding: 0;
 }
 
 @keyframes shake {
@@ -92,13 +95,16 @@ img {
   }
 }
 
-.chopsticks, .avocado, .shrimp {
+.chopsticks,
+.avocado,
+.shrimp {
   animation: 1.5s infinite linear shake;
   transform-origin: 50% 50%;
   transform-box: fill-box;
 }
 
-.salmon, .cucumber {
+.salmon,
+.cucumber {
   animation: 1.5s infinite reverse linear shake;
   transform-origin: 50% 50%;
   transform-box: fill-box;
@@ -112,46 +118,61 @@ img {
 
 /* hyperlinks & buttons
 default (primary, teal): #239caa
-visited (light teal): #7cbbc2
-hover/focus (secondary, yellow): #ffc400
+hover/focus (secondary, yellow): #f19f24
 active (dark teal): #0c5668
 */
 a {
-  color: #239caa;
+  color: #1D828E;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 400;
 }
 
-a:visited {
-  color: #7cbbc2;
-}
-
-a:hover, a:focus {
-  color: #ffc400;
+a:hover,
+a:focus {
+  color: #f19f24;
   text-decoration: underline;
 }
 
 a:active {
-  color: #f19f24;
+  color: #D17D00;
+}
+
+#topbtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #ffc400; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  height: 60px;
+  width: 60px;
+  padding: 15px; /* Some padding */
+  border-radius: 500px; /* Rounded corners */
+  font-size: 1em; /* Increase font size */
+}
+
+#topbtn:hover {
+  background-color: #f19f24; /* Add a dark-grey background on hover */
 }
 
 .button {
   display: inline-block;
   background-color: #239caa;
-  color: #ffffff;
+  color: #fff;
   font-weight: 400;
   padding: 10px;
   border-radius: 5px;
   transition: 0.2s opacity;
 }
 
-.button:visited {
-  color: #ffffff;
-}
-
 .button:hover {
   opacity: 0.7;
   text-decoration: none;
+  color: #fff;
 }
 
 .button:active {
@@ -159,66 +180,59 @@ a:active {
 }
 
 .button.contact {
-  background-color: #FFFFFF;
+  background-color: #fff;
   color: #239caa;
   text-transform: uppercase;
 }
 
-.button.contact:hover {
-  background-color: #7cbbc2;
-  color: #ffffff;
+.button.contact:active {
+  background-color: #ADEBF2;
 }
 
-.button.contact:active {
-  background-color: #ffc400;
+.inactive {
+  opacity: 0.7;
 }
 
 .fab {
-  color: #ffffff;
+  color: #fff;
 }
 
 .centered {
   text-align: center;
+  padding-bottom: 20px;
 }
 
 /* Layout styling */
 header {
-  background-color: #ffffff;
+  background-color: #fff;
   padding: 10px 0;
   position: fixed;
   width: 100%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-nav>ul {
+nav > ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-nav>ul>li>a {
+nav > ul > li {
+  padding: 6px 0;
+}
+
+nav > ul > li > a {
   padding: 0 15px;
   text-transform: uppercase;
   font-weight: 600;
-}
-
-nav>ul>li>a:visited {
-  color: #f9c77d;
-}
-
-nav>ul>li>a:hover {
-  color: #f19f24;
-}
-
-nav>ul>li>a:active {
-  color: #0c5668;
 }
 
 .navtoggle li:not(:last-child) {
   display: none;
 }
 
-.navtoggle, .navtoggle.responsive {
+.navtoggle,
+.navtoggle.responsive {
   position: relative;
 }
 
@@ -241,7 +255,7 @@ nav>ul>li>a:active {
 
 main {
   padding-top: 100px;
-  background-color: #ffffff;
+  background-color: #fff;
   width: 100%;
   text-align: center;
 }
@@ -254,15 +268,16 @@ footer {
   text-align: center;
   padding: 2px;
   background-color: #239caa;
-  color: #FFFFFF;
+  color: #fff;
 }
 
 .container {
+  max-width: 800px;
   padding: 0 15px;
 }
 
 .row {
-  padding: 25px 0px 25px 0px;
+  padding: 40px 0;
 }
 
 .fab {
@@ -279,21 +294,24 @@ footer {
   display: inline-block;
 }
 
-h1, #hero p {
+h1,
+#hero p {
   text-align: center;
 }
 
 #social.container {
-  padding: 4px 0px 20px 0px;
+  padding: 4px 0 20px;
 }
 
-#contact h2, #social h2 {
+#contact h2,
+#social h2 {
   margin-bottom: 10px;
+  text-decoration: none;
 }
 
 /* ==============================
 medium devices (640px or larger)
-=================================*/
+================================= */
 @media only screen and (min-width: 641px) {
   header {
     text-align: unset;
@@ -316,12 +334,12 @@ medium devices (640px or larger)
     display: block;
   }
 
-  nav>ul {
+  nav > ul {
     margin: 1em 0;
     padding-top: 20px;
   }
 
-  nav>ul>li {
+  nav > ul > li {
     display: inline-block;
   }
 
@@ -335,6 +353,7 @@ medium devices (640px or larger)
 
   .logo {
     min-width: 100px;
+    padding: 0;
   }
 
   .col-md-6 {
@@ -343,7 +362,7 @@ medium devices (640px or larger)
 
   [class*="col-"] {
     float: left;
-    padding: 0px 10px 0px 10px;
+    padding: 0 10px;
   }
 
   .row::after {
@@ -351,11 +370,16 @@ medium devices (640px or larger)
     clear: both;
     display: table;
   }
+
+  #topbtn {
+    height: 70px;
+    width: 70px;
+  }
 }
 
 /* ==============================
 large devices (1024px or larger)
-=================================*/
+================================= */
 @media only screen and (min-width: 1024px) {
   .col-lg-7 {
     width: 58.33%;
@@ -366,7 +390,6 @@ large devices (1024px or larger)
   }
 
   .container {
-    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -374,5 +397,7 @@ large devices (1024px or larger)
 
 /* ==============================
 x-large devices (1440px or larger)
-=================================*/
-@media only screen and (min-width: 1440px) {}
+================================= */
+@media only screen and (min-width: 1440px) {
+  /* empty */
+}
