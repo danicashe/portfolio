@@ -71,6 +71,10 @@ img {
   padding: 0;
 }
 
+.portrait {
+  max-width: 600px;
+}
+
 @keyframes shake {
   0% {
     transform: rotate(0deg);
